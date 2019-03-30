@@ -48,7 +48,7 @@ The project would be deployed using GCP. Link would be given soon.
 * **Rohan Menon** - *Initial work* - [rohanmenon96](https://github.com/rohanmenon96)
 * **Jennifer Cafiero** 
 * **Hanfan Wang** 
-* **Kajol Acharya* 
+* **Kajol Acharya**
 * **Yiwei Xiang** 
 
 ## License
