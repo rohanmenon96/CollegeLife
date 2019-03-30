@@ -15,7 +15,7 @@ app.engine("handlebars", exphbs());
 app.set("view engine", "handlebars");
 
 app.listen(3000, () => {
-	console.log("Pendikan is now live!");
+	console.log("CollegeLife is now live!");
 	console.log("Your routes will be running on http://localhost:3000");
 	if (process && process.send) process.send({ done: true });
 });
