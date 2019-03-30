@@ -4,7 +4,8 @@
   "description": "A forum for Stevens students to help them discuss some of the problems they might encounter. Students can post queries in categories regarding specific courses and other students can upvote/downvote the problem or post their own responses, similar to a StackOverflow post.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" :  "node app.js"
   },
   "repository": {
     "type": "git",
