@@ -3,12 +3,13 @@ const bodyParser = require("body-parser");
 const exphbs = require("express-handlebars");
 const cookieParser = require("cookie-parser");
 const path = require("path");
-const static = express.static(__dirname + "../assets");
 let xss = require("xss");
+const static = express.static(__dirname + "../views");
+
 
 const app = express();
 
-app.use("../assets", static);
+app.use("/views", static);
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -21,7 +22,8 @@ app.listen(80, () => {
 });
 
 app.get("/login",async(req,res)=>{
-    res.sendFile(path.join(__dirname, "../assets/login.html"))
+    res.sendFile(path.join(__dirname, "../views/login.html"))
+    //res.send("Hello");
 })
 
 app.get("*",async(req,res)=>{
