@@ -2,12 +2,12 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const exphbs = require("express-handlebars");
 const cookieParser = require("cookie-parser");
-const static = express.static(__dirname + "/public");
+const static = express.static(__dirname + "../assets");
 let xss = require("xss");
 
 const app = express();
 
-app.use("/public", static);
+app.use("../assets", static);
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
