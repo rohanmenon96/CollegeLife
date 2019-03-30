@@ -45,16 +45,12 @@ The project would be deployed using GCP. Link would be given soon.
 
 ## Authors
 
-* **Rohan Menon** - *Initial work* - [rohanmenon96](https://github.com/rohanmenon96)
-* **Jennifer Cafiero** 
-* **Hanfan Wang** 
-* **Kajol Acharya**
-* **Yiwei Xiang** 
+* **Rohan Menon** - [rohanmenon96](https://github.com/rohanmenon96)
+* **Jennifer Cafiero** - [jcafiero](https://github.com/jcafiero)
+* **Hanfan Wang** - [ffffvvvvv](https://github.com/ffffvvvvv)
+* **Kajol Acharya** - [KajolAch](https://github.com/KajolAch)
+* **Yiwei Xiang** - [hanfanw](https://github.com/hanfanw)
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-*Thank you IDT corporation for giving me this oppurtunity. I have learnt a lot with this project.
