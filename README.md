@@ -26,7 +26,9 @@ After installing NodeJS and NPM,
 
 ## Deployment
 
-The project would be deployed using GCP. Link would be given soon.
+The project is deployed using GCP.
+Link : www.efficall.co:81
+
 
 ## Built With
 
