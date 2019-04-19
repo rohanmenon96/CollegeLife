@@ -49,9 +49,9 @@ Link : www.efficall.co:81
 
 * **Rohan Menon** - [rohanmenon96](https://github.com/rohanmenon96)
 * **Jennifer Cafiero** - [jcafiero](https://github.com/jcafiero)
-* **Hanfan Wang** - [ffffvvvvv](https://github.com/ffffvvvvv)
+* **Hanfan Wang** - [hanfanw](https://github.com/hanfanw)
 * **Kajol Acharya** - [KajolAch](https://github.com/KajolAch)
-* **Yiwei Xiang** - [hanfanw](https://github.com/hanfanw)
+* **Yiwei Xiang** - [ffffvvvvv](https://github.com/ffffvvvvv) 
 
 ## License
 
