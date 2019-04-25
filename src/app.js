@@ -25,9 +25,13 @@ app.listen(81, () => {
 
 app.get("/",async(req,res)=>{
   res.sendFile(path.join(__dirname,"/views/loginMain.html"))
-})
+});
 
 app.get("/login",(req,res)=>{
-  res.sendFile(path.join(__dirname, "/views/login.html"))
-})
+  res.sendFile(path.join(__dirname, "/views/landing.html"))
+});
+
+app.get("/home",(req,res)=>{
+  res.sendFile(path.join(__dirname, "/views/home.html"))
+});
 

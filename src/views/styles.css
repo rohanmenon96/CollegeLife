@@ -1,3 +1,5 @@
+/* landing page css */
+
 .home-section, .jumbotron {
   height: 100vh;
   overflow: auto;
@@ -115,4 +117,54 @@ footer span.text-muted {
   font-size: 12px;
   width: 150px;
   margin:auto;
+}
+
+.justify-content-md-center {
+	display: flex;
+}
+
+/* End landing page css */
+
+/* Dashboard css */
+
+.dash-section {
+	margin: auto;
+}
+
+.topic-tile {
+	border: solid 1px #888;
+	border-radius: 3px;
+	margin: 15px;
+	
+	/* display: flex; */
+}
+
+.tile-contents {
+	display: flex;
+	justify-content: space-around;
+}
+
+.voting-btns {
+	display: flex;
+	max-width: 100px;
+	flex-direction: column;
+	text-align: center;
+	padding: 10px;
+}
+
+.voting-btns i {
+	font-size: 24px;
+}
+
+.upvote i:hover {
+	color: green;
+}
+
+.downvote i:hover {
+	color: red;
+}
+
+.topic-comment {
+	max-width: 100px;
+	margin: auto 0;
 }
