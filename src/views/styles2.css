@@ -9,3 +9,15 @@
     box-shadow: 10px 10px 5px -8px rgba(207,196,207,1);
 }
 
+.button {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    background-color: white;
+    color: black;
+    border: 2px solid rgb(167, 185, 167); /* Green */
+  }
+  
+  .button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+  }
