@@ -27,11 +27,16 @@ app.get("/",async(req,res)=>{
   res.sendFile(path.join(__dirname,"/views/login.html"))
 })
 
-app.get("/",async(req,res)=>{
-  res.sendFile(path.join(__dirname,"/views/loginMain.html"))
-})
-
 app.get("/login", async(req,res)=>{
   res.sendFile(path.join(__dirname,"/views/loginpage.html"))
 })
+
+app.get("/register", async(req,res)=>{
+  res.sendFile(path.join(__dirname,"/views/register.html"))
+})
+
+app.get("/dashboard",async(req,res)=>{
+  res.sendFile(path.join(__dirname,"/views/loginMain.html"))
+})
+
           
