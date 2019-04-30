@@ -36,7 +36,7 @@ app.get("/register", async(req,res)=>{
 })
 
 app.get("/dashboard",async(req,res)=>{
-  res.sendFile(path.join(__dirname,"/views/dashboard.html"))
+  res.render(path.join(__dirname,"/views/dashboard.handlebars"))
 })
 
           
