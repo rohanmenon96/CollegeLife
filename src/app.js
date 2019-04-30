@@ -24,7 +24,7 @@ app.listen(81, () => {
 });
 
 app.get("/",async(req,res)=>{
-  res.sendFile(path.join(__dirname,"/views/login.html"))
+  res.sendFile(path.join(__dirname,"/views/landingpage.html"))
 })
 
 app.get("/login", async(req,res)=>{
@@ -36,7 +36,7 @@ app.get("/register", async(req,res)=>{
 })
 
 app.get("/dashboard",async(req,res)=>{
-  res.sendFile(path.join(__dirname,"/views/loginMain.html"))
+  res.sendFile(path.join(__dirname,"/views/dashboard.html"))
 })
 
           
