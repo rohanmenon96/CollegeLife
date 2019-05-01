@@ -5,6 +5,7 @@ const exphbs = require("express-handlebars");
 const cookieParser = require("cookie-parser");
 const exphndlbars = require("express-handlebars");
 const path = require("path");
+const mongoFunctions = require("../src/data/mongoFunctions")
 
 
 app.use(bodyParser.json());
@@ -40,7 +41,8 @@ app.get("/dashboard",async(req,res)=>{
 })
 
 app.get("/allcourses", async(req,res)=>{
-  
+  let courses = await mongoFunctions.getAllCourses();
+  console.log("Inside route , Courses: ",courses)
   res.render(path.join(__dirname,"/views/allcourses.handlebars"))
 })
 

@@ -1,16 +1,23 @@
 const MongoClient = require('mongodb').MongoClient;
 var PropertiesReader = require('properties-reader');
-var properties = PropertiesReader('user.properties');
+var properties = PropertiesReader('../src/data/user.properties');
 let collection = "";
 const client = new MongoClient(properties.get("uri"), { useNewUrlParser: true });
 
-async function connect()
+async function getCollection(collectionName)
 {
-  console.log("Inside conect()")
   await client.connect();
-  console.log("Connection")
-  collection = client.db("CollegeLife").collection("Users");
-  console.log("inside", collection)
+  switch(collectionName) {
+    case "Users":
+      collection = client.db("CollegeLife").collection("Users");
+      break;
+    case "AllCourses":
+      collection = client.db("CollegeLife").collection("Courses");
+      break;
+    default:
+      console.log("Inside Switch Statement . Collection not found")
+      break;
+  }
   return collection
 }
 
@@ -21,5 +28,5 @@ async function close()
 
 
 module.exports = {
-  connect, close
+  getCollection, close
 }

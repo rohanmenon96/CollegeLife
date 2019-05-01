@@ -9,13 +9,13 @@ async function test(){
 }
 
 async function getAllCourses(){
-    console.log("Get All Courses")
-    let collection = await userFunctions.connect();
-    console.log("collection:", collection);
-    collection.insertOne({'a':'a'});
+    let collection = await userFunctions.getCollection("AllCourses");
+    let courses = collection.find({}).toArray();
+    console.log("collection:", courses);
     await userFunctions.close();
+    return courses;
 }
 
 module.exports = {
-    test
+    test, getAllCourses
 }
