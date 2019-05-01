@@ -5,12 +5,8 @@ const exphbs = require("express-handlebars");
 const cookieParser = require("cookie-parser");
 const exphndlbars = require("express-handlebars");
 const path = require("path");
-<<<<<<< HEAD
 const firebase = require("../src/data/firebaseConfig");
-//const mongo = require("../src/data/mongoConnection");
-=======
-const mongoFunctions = require("../src/data/mongoFunctions")
->>>>>>> 8a9c943588adf1944ec40cd84afe502e872039e9
+const mongoFunctions = require("../src/data/mongoFunctions");
 
 
 app.use(bodyParser.json());
@@ -46,7 +42,7 @@ app.post("/login", async(req,res)=>{
   {
     let login = await firebase.auth().signInWithEmailAndPassword(email, password);
     let userId = login.user.uid;
-    res.sendFile(path.join(__dirname,"/views/landingpage.html"))
+    res.render(path.join(__dirname,"/views/dashboard.handlebars"))
   }
   catch(e)
   {
