@@ -2,5 +2,5 @@ node_modules/
 .DS_Store/
 bootstrap/
 .vs/
-config.txt
+config.properties
 user.properties
