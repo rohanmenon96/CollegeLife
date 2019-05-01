@@ -40,6 +40,7 @@ app.get("/dashboard",async(req,res)=>{
 })
 
 app.get("/allcourses", async(req,res)=>{
+  
   res.render(path.join(__dirname,"/views/allcourses.handlebars"))
 })
 

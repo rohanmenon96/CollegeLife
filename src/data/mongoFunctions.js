@@ -8,4 +8,14 @@ async function test(){
     await userFunctions.close();
 }
 
-test();
+async function getAllCourses(){
+    console.log("Get All Courses")
+    let collection = await userFunctions.connect();
+    console.log("collection:", collection);
+    collection.insertOne({'a':'a'});
+    await userFunctions.close();
+}
+
+module.exports = {
+    test
+}
