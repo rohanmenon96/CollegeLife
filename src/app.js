@@ -43,7 +43,10 @@ app.get("/dashboard",async(req,res)=>{
 app.get("/allcourses", async(req,res)=>{
   let courses = await mongoFunctions.getAllCourses();
   console.log("Inside route , Courses: ",courses)
-  res.render(path.join(__dirname,"/views/allcourses.handlebars"))
+  var obj = {
+    "courses" : courses
+  }
+  res.render(path.join(__dirname,"/views/allcourses.handlebars"), obj)
 })
 
           
