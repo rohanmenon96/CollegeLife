@@ -2,7 +2,7 @@ const MongoClient = require('mongodb').MongoClient;
 var PropertiesReader = require('properties-reader');
 var properties = PropertiesReader('../src/data/user.properties');
 let collection = "";
-const client = new MongoClient(properties.get("uri"), { useNewUrlParser: true });
+const client = new MongoClient(properties.get("uri"), {useNewUrlParser: true, autoReconnect: true, keepAlive: 30000, connectTimeoutMS: 30000});
 
 async function getCollection(collectionName)
 {
@@ -18,7 +18,7 @@ async function getCollection(collectionName)
       console.log("Inside Switch Statement . Collection not found")
       break;
   }
-  return collection
+  return collection;
 }
 
 async function close()

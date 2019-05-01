@@ -12,7 +12,6 @@ async function getAllCourses(){
     let collection = await userFunctions.getCollection("AllCourses");
     let courses = collection.find({}).toArray();
     console.log("collection:", courses);
-    await userFunctions.close();
     return courses;
 }
 
