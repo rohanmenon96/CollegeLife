@@ -39,4 +39,8 @@ app.get("/dashboard",async(req,res)=>{
   res.render(path.join(__dirname,"/views/dashboard.handlebars"))
 })
 
+app.get("/allcourses", async(req,res)=>{
+  res.render(path.join(__dirname,"/views/allcourses.handlebars"))
+})
+
           
