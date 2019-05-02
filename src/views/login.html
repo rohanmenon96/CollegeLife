@@ -18,6 +18,15 @@
                     <a class="nav-link" href="#features">Features <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="./login">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./register">Sign up</a>
+                </li>
+                <li class="nav-item">
+                    <a id="logout"class="nav-link" href="#">Logout</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#about">About</a>
                 </li>
                 <li class="nav-item">
@@ -194,6 +203,52 @@
         </div>
     </footer>
 </body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/5.11.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.11.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.11.0/firebase-firestore.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyARX7FPL0aEZpOjmFVGceNNGKv7Oxj2-Yc",
+    authDomain: "college-life-8aa5b.firebaseapp.com",
+    databaseURL: "https://college-life-8aa5b.firebaseio.com",
+    projectId: "college-life-8aa5b",
+    storageBucket: "college-life-8aa5b.appspot.com",
+    messagingSenderId: "960457236570",
+    appId: "1:960457236570:web:ebc39a3ad56e29e2"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+
+//   db.settings({timestampsInSnapshots: true});
+
+// logout
+const logout = document.querySelector('#logout');
+logout.addEventListener('click', (e) => {
+  e.preventDefault();
+  auth.signOut();
+});
+
+auth.onAuthStateChanged(user => {
+            if (user) {
+                console.log("user logged in: ", +user);
+            } else {
+                console.log("user logged out");
+            }
+        });
+</script>
+
+<!-- <script src="../scripts/auth.js"></script>
+<script src="../scripts/index.js"></script> -->
+
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
