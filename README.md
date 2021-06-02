@@ -3,6 +3,8 @@
 A forum for Stevens students to help them discuss some of the problems they might encounter. Students can post queries in
 categories regarding specific courses and other students can upvote/downvote the problem or post their own responses, similar to a StackOverflow post. Students can interact with one another in the comments section on each page. We also hope to expand this to include topics such as events, clubs, or on-campus activities.
 
+Project Walkthrough: https://www.youtube.com/watch?v=fvnanJdNHdY&t=277s
+
 ## Getting Started
 
 For using this applcation on your localhost , you will need two things: </br>
